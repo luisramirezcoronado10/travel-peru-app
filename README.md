@@ -1,16 +1,13 @@
-# travel_peru
+# Travel Perú App Demo
 
-A new Flutter project.
+Travel Perú App Demo es una aplicación pequeña desarrollada en Flutter para aplicar los conocimientos adquiridos.
 
-## Getting Started
+## Diseño implementado
 
-This project is a starting point for a Flutter application.
+El diseño que se implementó fue el siguiente:
 
-A few resources to get you started if this is your first Flutter project:
+![image](screenshot/screenshot_1.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Créditos a
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Luis Ramirez Design XD](https://www.instagram.com/luisramirez.design/)
