@@ -11,18 +11,25 @@ class PlaceDetail extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        body: Column(
-          children: [
-            navegation(),
-            SizedBox(height: 280),
-            place(),
-            SizedBox(height: 20),
-            features(),
-            SizedBox(height: 20),
-            description(),
-            SizedBox(height: 20),
-            buttons(),
-          ],
+        body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('assets/images/background-machu-picchu.png'),
+            fit: BoxFit.cover,
+          )),
+          child: Column(
+            children: [
+              navegation(),
+              SizedBox(height: 300),
+              place(),
+              SizedBox(height: 20),
+              features(),
+              SizedBox(height: 20),
+              description(),
+              SizedBox(height: 20),
+              buttons(),
+            ],
+          ),
         ),
       ),
     );
@@ -35,7 +42,7 @@ class PlaceDetail extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Icon(Icons.arrow_back, color: Colors.white),
-          Icon(Icons.headset_rounded, color: Colors.white),
+          Icon(Icons.collections_bookmark_outlined, color: Colors.white),
         ],
       ),
     );
@@ -57,10 +64,11 @@ class PlaceDetail extends StatelessWidget {
           ),
           Row(
             children: [
-              Icon(Icons.star, color: Colors.white),
-              Icon(Icons.star, color: Colors.white),
-              Icon(Icons.star, color: Colors.white),
-              Icon(Icons.star, color: Colors.white),
+              Icon(Icons.star, color: Colors.white, size: 16),
+              Icon(Icons.star, color: Colors.white, size: 16),
+              Icon(Icons.star, color: Colors.white, size: 16),
+              Icon(Icons.star, color: Colors.white, size: 16),
+              Icon(Icons.star, color: Colors.white, size: 16),
               Text(
                 '(2.2k visitas)',
                 style: TextStyle(
