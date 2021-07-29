@@ -1,4 +1,7 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:travel_peru/pages/home.dart';
 import 'package:travel_peru/widgets/button_pay.dart';
 import 'package:travel_peru/widgets/button_price.dart';
 import 'package:travel_peru/widgets/feature-item.dart';
@@ -19,7 +22,7 @@ class PlaceDetail extends StatelessWidget {
           )),
           child: Column(
             children: [
-              navegation(),
+              navegation(context),
               SizedBox(height: 300),
               place(),
               SizedBox(height: 20),
@@ -35,13 +38,23 @@ class PlaceDetail extends StatelessWidget {
     );
   }
 
-  Widget navegation() {
+  Widget navegation(context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 36, vertical: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(Icons.arrow_back, color: Colors.white),
+          InkWell(
+            child: Icon(Icons.arrow_back, color: Colors.white),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              );
+            },
+          ),
           Icon(Icons.collections_bookmark_outlined, color: Colors.white),
         ],
       ),

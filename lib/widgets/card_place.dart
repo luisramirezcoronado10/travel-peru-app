@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_peru/pages/place_detail.dart';
 
 class CardPlace extends StatelessWidget {
   final AssetImage imagePlace;
@@ -16,19 +17,29 @@ class CardPlace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 260,
-      width: 186,
-      decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.circular(15),
-        image: DecorationImage(
-          //image: AssetImage('assets/images/machu-picchu.png'),
-          image: imagePlace,
-          fit: BoxFit.cover,
+    return InkWell(
+      child: Container(
+        height: 260,
+        width: 186,
+        decoration: BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.circular(15),
+          image: DecorationImage(
+            //image: AssetImage('assets/images/machu-picchu.png'),
+            image: imagePlace,
+            fit: BoxFit.cover,
+          ),
         ),
+        child: info(),
       ),
-      child: info(),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PlaceDetail(),
+          ),
+        );
+      },
     );
   }
 
